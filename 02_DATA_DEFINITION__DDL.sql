@@ -28,6 +28,14 @@ CREATE TABLE persons(
     CONSTRAINT pk_persons PRIMARY KEY(id)
 )
 
+CREATE TABLE customers(
+   id INT NOT NULL,
+   first_name VARCHAR(50) NOT NULL,
+   country VARCHAR(50) NOT NULL,
+   score INT ,
+   CONSTRAINT pk_customers PRIMARY KEY (id)
+)
+
 SELECT * FROM persons;
 
 
@@ -44,8 +52,9 @@ ADD email VARCHAR(50) NOT NULL
 ALTER TABLE persons
 DROP COLUMN phone
 
--- Rename the column name phone to mob_phone 
-
+-- Rename the column email  to mob_phone 
+ALTER TABLE persons
+RENAME COLUMN email TO mob_phone
 
 
 /* ============================================================================== 
